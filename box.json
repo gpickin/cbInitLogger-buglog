@@ -1,0 +1,40 @@
+{
+    "name":"cbInitLogger-buglog",
+    "version":"1.0.0",
+    "author":"Gavin Pickin",
+    "location":"gpickin/cbInitLogger-buglog#v1.0.0",
+    "homepage":"https://github.com/gpickin/cbInitLogger-buglog",
+    "documentation":"https://github.com/gpickin/cbInitLogger-buglog",
+    "repository":{
+        "type":"git",
+        "URL":"https://github.com/gpickin/cbInitLogger-buglog"
+    },
+    "bugs":"https://github.com/gpickin/cbInitLogger-buglog/issues",
+    "slug":"cbInitLogger-buglog",
+    "shortDescription":"I am a ColdBox module that logs ColdBox Framework Inits with BugLog",
+    "description":"I am a ColdBox module that logs ColdBox Framework Inits with BugLog",
+    "type":"modules",
+    "dependencies":{},
+    "devDependencies":{
+        "coldbox":"^4.3.0+188",
+        "testbox":"^2.4.0+80"
+    },
+    "installPaths":{
+        "testbox":"testbox",
+        "coldbox":"tests/resources/app/coldbox"
+    },
+    "scripts":{
+        "postVersion":"package set location='gpickin/cbInitLogger-buglog#v`package version`'",
+        "onRelease":"publish",
+        "postPublish":"!git push && !git push --tags"
+    },
+    "ignore":[
+        "**/.*",
+        "test",
+        "tests"
+    ],
+    "testbox":{
+        "runner":"http://localhost:51647/tests/runner.cfm",
+        "verbose":false
+    }
+}
